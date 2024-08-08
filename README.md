@@ -1,2 +1,2 @@
-# fic
-File Integrity Checker
+# cryper
+Crypto Perfomance Toolkit
