@@ -2,9 +2,7 @@
 #include <sstream>
 #include <string>
 
-namespace fic
-{
-namespace log
+namespace cryper::utils
 {
 
 namespace detail
@@ -41,5 +39,4 @@ std::string Format(std::string_view str, Args... args)
     return oss.str();
 }
 
-} // namespace log
-} // namespace fic
+} // namespace cryper::utils
