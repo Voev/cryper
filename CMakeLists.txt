@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
-file(STRINGS "version.txt" VERSION_STRING)
+cmake_minimum_required(VERSION 3.20)
+file(STRINGS "VERSION.md" VERSION_STRING)
 
 project(cryper
         LANGUAGES CXX
@@ -24,6 +24,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+# CMake settings
+include(IncludeLibraries)
 
 # Include project directory
 include_directories(${PROJECT_SOURCE_DIR}/include)

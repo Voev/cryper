@@ -1,11 +1,8 @@
-#include <fic/log/print.hpp>
-#include <fic/log/format.hpp>
+#include <benchmark/benchmark.h>
 
-using namespace fic::log;
-
-int main()
+int main(int argc, char* argv[])
 {
-    Manager::Instance().SetMaxLevel(Level::Warning);
-    Manager::Instance().EnableConsole();
-    Print(Level::Warning) << Format("{} Fucked {}!", "Hello", "World") << std::endl;
+    ::benchmark::Initialize(&argc, argv);
+    ::benchmark::RunSpecifiedBenchmarks();
+    return EXIT_SUCCESS;
 }
